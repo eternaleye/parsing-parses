@@ -111,7 +111,7 @@ Section cfg.
     : minimal_parse_of_nonterminal (String := String) (G := G) str0 valid' str nonterminal.
     Proof.
       destruct p.
-      { constructor (assumption). }
+      { constructor; assumption. }
       { exfalso; clear -Hlt; omega. }
     Defined.
 
@@ -123,7 +123,7 @@ Section cfg.
     Proof.
       destruct p as [p|p].
       { constructor. }
-      { constructor (eapply contract_minimal_parse_of_nonterminal_lt; eassumption). }
+      { constructor; eapply contract_minimal_parse_of_nonterminal_lt; eassumption. }
     Defined.
 
     Definition contract_minimal_parse_of_production_lt
@@ -152,8 +152,8 @@ Section cfg.
     : minimal_parse_of (String := String) (G := G) str0 valid' str pats.
     Proof.
       induction p.
-      { constructor (eapply contract_minimal_parse_of_production_lt; eassumption). }
-      { constructor (eapply IHp; assumption). }
+      { constructor; eapply contract_minimal_parse_of_production_lt; eassumption. }
+      { constructor; eapply IHp; assumption. }
     Defined.
 
     Section contract_eq.

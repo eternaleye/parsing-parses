@@ -33,7 +33,7 @@ Section tests.
   Example ab_star_parses_ab : parse_of_grammar string_stringlike "ab"%string ab_star_grammar.
   Proof.
     hnf; simpl.
-    constructor (constructor); simpl.
+    constructor; constructor; simpl.
     apply ParseProductionCons with (str := "a"%string) (strs := "b"%string).
     { refine (ParseTerminal _ _ _). }
     { apply ParseProductionCons with (str := "b"%string) (strs := ""%string).
@@ -45,7 +45,7 @@ Section tests.
   Example ab_star_parses_abab : parse_of_grammar string_stringlike "abab"%string ab_star_grammar.
   Proof.
     hnf; simpl.
-    constructor (constructor); simpl.
+    constructor; constructor; simpl.
     apply ParseProductionCons with (str := "a"%string) (strs := "bab"%string).
     { refine (ParseTerminal _ _ _). }
     { apply ParseProductionCons with (str := "b"%string) (strs := "ab"%string).

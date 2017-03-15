@@ -27,7 +27,7 @@ Section tests.
                  | refine (ParseTerminal _ _ _)
                  | refine (ParseNonTerminal _ _)
                  | progress simpl
-                 | solve [ constructor (solve [ fin ]) ] ].
+                 | solve [ constructor; solve [ fin ] ] ].
 
   Example paren_expr_parses_1 : parse_of_grammar string_stringlike "(((123)))"%string paren_expr_grammar.
   Proof.
