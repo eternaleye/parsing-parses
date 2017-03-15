@@ -1,6 +1,7 @@
 Require Import Coq.Lists.List.
 
 Set Implicit Arguments.
+Set Asymmetric Patterns.
 Local Close Scope nat_scope.
 
 Section sigT.

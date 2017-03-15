@@ -8,6 +8,7 @@ Require Export ParsingParses.Parsers.MinimalParse.
 Require Import ParsingParses.Common ParsingParses.Common.Wf.
 
 Set Implicit Arguments.
+Set Asymmetric Patterns.
 Local Open Scope string_like_scope.
 
 Local Notation "f ∘ g" := (fun x => f (g x)).

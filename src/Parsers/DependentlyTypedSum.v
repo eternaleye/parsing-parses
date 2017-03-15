@@ -5,6 +5,7 @@ Require Import ParsingParses.Parsers.WellFoundedParse ParsingParses.Parsers.Cont
 Require Import ParsingParses.Common ParsingParses.Common.Wf ParsingParses.Common.Le ParsingParses.Common.Equality.
 
 Set Implicit Arguments.
+Set Asymmetric Patterns.
 
 Local Close Scope nat_scope.
 Local Open Scope string_like_scope.

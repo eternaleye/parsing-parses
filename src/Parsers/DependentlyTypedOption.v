@@ -6,6 +6,7 @@ Require Import ParsingParses.Parsers.DependentlyTyped ParsingParses.Parsers.Base
 Require Import ParsingParses.Common ParsingParses.Common.Equality.
 
 Set Implicit Arguments.
+Set Asymmetric Patterns.
 
 Local Open Scope string_like_scope.
 

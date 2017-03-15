@@ -8,6 +8,7 @@ Require Import ParsingParses.Parsers.Splitters.RDPList ParsingParses.Parsers.Spl
 Require Import ParsingParses.Common ParsingParses.Common.Wf.
 
 Set Implicit Arguments.
+Set Asymmetric Patterns.
 Local Open Scope string_like_scope.
 
 (** TODO: Allow stubbing out of individual sub-parse methods *)

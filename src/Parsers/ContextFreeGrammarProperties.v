@@ -3,6 +3,7 @@ Require Import ParsingParses.Parsers.StringLike ParsingParses.Parsers.ContextFre
 Require Import Coq.Classes.RelationClasses.
 
 Set Implicit Arguments.
+Set Asymmetric Patterns.
 
 Delimit Scope string_like_scope with string_like.
 

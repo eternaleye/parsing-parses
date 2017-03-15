@@ -16,6 +16,7 @@ Require Import ParsingParses.Parsers.ContextFreeGrammarNotations.
 Require Import ParsingParses.Parsers.Grammars.ABStar.
 
 Set Implicit Arguments.
+Set Asymmetric Patterns.
 Local Open Scope string_scope.
 Local Open Scope string_like_scope.
 

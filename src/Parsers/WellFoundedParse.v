@@ -2,6 +2,7 @@
 Require Import Coq.Strings.String Coq.Lists.List Coq.Program.Program Coq.Program.Wf Coq.Arith.Wf_nat Coq.Relations.Relation_Definitions.
 Require Import ParsingParses.Parsers.ContextFreeGrammar.
 
+Set Asymmetric Patterns.
 Section rel.
   Context {CharType} {String : string_like CharType} {G : grammar CharType}.
 
