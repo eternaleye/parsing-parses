@@ -273,7 +273,7 @@ Section recursive_descent_parser.
             Proof.
               destruct splits as [ | [s1 s2] splits ]; simpl in *.
               { exact (inr (H_prod_split' pf tt)). }
-              { refine (let Hs1 := _ in
+              { simple refine (let Hs1 := _ in
                         let Hs2 := _ in
                         match (@parse_item str0
                                            valid
